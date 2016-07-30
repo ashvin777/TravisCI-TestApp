@@ -20,10 +20,10 @@ before_script:
 - echo "Before script stage"
 script:
 # Run tests
-- echo "Running tests"
-- npm test
-- echo "Starting build"
-- npm run build
+- cordova create Test
+- cd Test
+- cordova platform add android
+- cordova build android
 after_success:
 # You can do thing after success
 - echo "Build success"
