@@ -24,6 +24,13 @@ script:
 - cd Test
 - cordova platform add android
 - cordova build android
+after_deploy:
+  provider: releases
+  api_key: "1a291179aafc1c4239a23c9f12eecf74d684a8b2"
+  file: "TravisCI-TestApp/Test/platforms/android/build/outputs/apk/android-debug.apk"
+  skip_cleanup: true
+  on:
+    tags: true
 after_success:
 # You can do thing after success
 - echo "Build success"
