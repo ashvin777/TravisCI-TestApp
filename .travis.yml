@@ -1,8 +1,8 @@
 language: android
 android:
   components:
-    - build-tools-22.0.1 # Specify your build tools verison
-    - android-22 # Android Platform Target
+    - build-tools-23.0.1 # Specify your build tools verison
+    - android-23 # Android Platform Target
 env: # Envirement Variables
 global:
 before_install:
