@@ -24,7 +24,7 @@ script:
 - cd Test
 - cordova platform add android
 - cordova build android
-after_deploy:
+deploy:
   provider: releases
   api_key: "1a291179aafc1c4239a23c9f12eecf74d684a8b2"
   file: "TravisCI-TestApp/Test/platforms/android/build/outputs/apk/android-debug.apk"
