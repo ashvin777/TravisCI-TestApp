@@ -30,7 +30,7 @@ deploy:
   file: "TravisCI-TestApp/Test/platforms/android/build/outputs/apk/android-debug.apk"
   skip_cleanup: true
   on:
-    repo: ashvin777/TravisCI-TestApp
+    repo: "ashvin777/TravisCI-TestApp"
     tags: true
     all_branches: true
 after_success:
