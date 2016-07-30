@@ -32,6 +32,7 @@ deploy:
   on:
     repo: ashvin777/TravisCI-TestApp
     tags: true
+    all_branches: true
 after_success:
 # You can do thing after success
 - echo "Build success"
