@@ -14,7 +14,7 @@ install:
 - sudo apt-get install -y python-software-properties
 - curl --silent --location https://deb.nodesource.com/setup_6.x | sudo bash -
 - sudo apt-get install -y nodejs
-- sudo npm i -g cordova
+- sudo npm i -g cordova http-server
 before_script:
 # Commands to excecute before running tests
 - echo "Before script stage"
@@ -24,15 +24,7 @@ script:
 - cd Test
 - cordova platform add android
 - cordova build android
-deploy:
-  provider: releases
-  api_key: "a9a15d3951f191042b04803aea889468bfac0884"
-  file: "TravisCI-TestApp/Test/platforms/android/build/outputs/apk/android-debug.apk"
-  skip_cleanup: true
-  on:
-    repo: "ashvin777/TravisCI-TestApp"
-    tags: true
-    all_branches: true
+- http-server
 after_success:
 # You can do thing after success
 - echo "Build success"
