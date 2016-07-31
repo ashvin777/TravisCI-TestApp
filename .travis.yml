@@ -14,7 +14,7 @@ install:
 - sudo apt-get install -y python-software-properties
 - curl --silent --location https://deb.nodesource.com/setup_6.x | sudo bash -
 - sudo apt-get install -y nodejs
-- sudo npm i -g cordova http-server
+- sudo npm i -g cordova http-server http-tunnel
 before_script:
 # Commands to excecute before running tests
 - echo "Before script stage"
@@ -24,7 +24,7 @@ script:
 - cd Test
 - cordova platform add android
 - cordova build android
-- http-server
+- http-tunnel --server pub.2x.io -d -s
 after_success:
 # You can do thing after success
 - echo "Build success"
